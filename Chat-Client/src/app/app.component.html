@@ -1,0 +1,16 @@
+<h1>UATIZAP</h1>
+
+<div>
+  <h2>Chat em Grupo</h2>
+  <input [(ngModel)]="user" placeholder="Digite seu nome">
+</div>
+<div *ngFor="let msg of messages">
+  <strong>{{msg.user}}:</strong> {{msg.message}}
+</div>
+<div>
+  <input [(ngModel)]="message" placeholder="Digite uma mensagem">
+  <button (click)="sendMessage()">Enviar</button>
+</div>
+<div>
+  <h2>Total de Cadastros: {{ totalUsers }}</h2>
+</div>
